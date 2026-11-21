@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Xcode & Swift Package Manager
+.build/
+.swiftpm/
+Packages
+xcuserdata/
+*.xcodeproj
+*.xcworkspace
+
+# Release outputs
+dist/
+*.dmg
+*.zip
+website/downloads/

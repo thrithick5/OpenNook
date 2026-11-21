@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OpenNook — Your Mac's Notch, Actually Useful (Free &amp; Open Source)</title>
+  <meta name="description" content="Your music, calendar, camera mirror, notes, timers, and a drag-and-drop file shelf right in your Mac's notch. 100% Free &amp; Open Source." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231d1d1f'/%3E%3Cpath d='M14 14h36v10a10 10 0 0 1-10 10H24a10 10 0 0 1-10-10V14z' fill='%23ffffff'/%3E%3Ccircle cx='32' cy='46' r='5' fill='%230071e3'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo" aria-label="OpenNook Home">
+        <span class="brand-mark">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 5C4 3.89543 4.89543 3 6 3H18C19.1046 3 20 3.89543 20 5V8C20 11.3137 17.3137 14 14 14H10C6.68629 14 4 11.3137 4 8V5Z" fill="currentColor"/>
+            <circle cx="12" cy="18.5" r="2.2" fill="#ffffff"/>
+          </svg>
+        </span>
+        <span class="brand-name">OpenNook</span>
+        <span class="brand-tag">v1.0.0</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="#simulator">Interactive Demo</a>
+        <a href="#features">Features</a>
+        <a href="#comparison">Why OpenNook</a>
+        <a href="#install">Install</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="downloads/OpenNook.dmg" download="OpenNook-1.0.0.dmg" class="btn btn-primary btn-sm">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          <span>Download .DMG</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-container">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span>Native Swift &amp; AppKit &bull; Menu-Bar-Only Background Mode &bull; 100% Free</span>
+        </div>
+
+        <h1 class="hero-title">
+          Your Mac's notch,<br />
+          <span class="accent-text">actually useful.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Your <strong>music</strong> (Apple Music, Spotify &amp; Browser YouTube Music), <strong>camera mirror</strong>, <strong>calendar</strong>, <strong>notes</strong>, <strong>timers</strong>, and a <strong>drag-and-drop Tray</strong> for your files—all visible in one place inside your MacBook's notch.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="downloads/OpenNook.dmg" download="OpenNook-1.0.0.dmg" class="btn btn-primary btn-lg" id="heroDownloadDmg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            <div class="btn-text-stack">
+              <span class="btn-main-label">Download for macOS</span>
+              <span class="btn-sub-label">Universal Disk Image (.dmg) &bull; Free Forever</span>
+            </div>
+          </a>
+
+          <a href="downloads/OpenNook.zip" download="OpenNook.zip" class="btn btn-secondary btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 8v13H3V8"/>
+              <path d="M1 3h22v5H1z"/>
+              <path d="M10 12h4"/>
+            </svg>
+            <div class="btn-text-stack">
+              <span class="btn-main-label">Download Portable .ZIP</span>
+              <span class="btn-sub-label">Direct App Bundle &bull; Instant Launch</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="hero-meta">
+          <span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+            macOS 13 Ventura, Sonoma, Sequoia &amp; Tahoe
+          </span>
+          <span class="meta-sep">&bull;</span>
+          <span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+            Apple Silicon &amp; Intel
+          </span>
+          <span class="meta-sep">&bull;</span>
+          <span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+            Hidden from Dock &amp; Cmd+Tab
+          </span>
+        </div>
+      </div>
+
+      <!-- ====================================================================
+           INTERACTIVE NOTCH SIMULATOR
+           - All widgets fit in one place without sideways scrolling
+           - Dynamically scales with Compact / Standard / Large Notch Size
+           ==================================================================== -->
+      <div class="container simulator-container" id="simulator">
+        <!-- Size Preset Bar above Bezel -->
+        <div class="simulator-size-bar">
+          <span class="size-bar-label">Notch &amp; Widget Size Preset:</span>
+          <div class="size-preset-group" role="group" aria-label="Notch Size Presets">
+            <button type="button" class="size-preset-btn" data-size="compact">Compact</button>
+            <button type="button" class="size-preset-btn active" data-size="standard">Standard</button>
+            <button type="button" class="size-preset-btn" data-size="large">Large</button>
+          </div>
+        </div>
+
+        <!-- MacBook Bezel & Screen Frame -->
+        <div class="macbook-bezel">
+          <div class="macbook-display" id="simDesktopArea">
+
+            <!-- THE NOTCH / DYNAMIC ISLAND (All Widgets Fit Side-by-Side Without Scrolling) -->
+            <div class="notch-anchor">
+              <div class="nook-island expanded size-standard" id="openNookIsland">
+
+                <!-- COLLAPSED NOTCH BAR (Mini Album Art + Camera + Mini Equalizer) -->
+                <div class="notch-collapsed-view" id="simCollapsedPill" title="Hover or click to open OpenNook">
+                  <div class="collapsed-left-art" id="collapsedMiniArt"></div>
+                  <div class="collapsed-camera-lens">
+                    <span class="lens-dot"></span>
+                  </div>
+                  <div class="collapsed-right-eq" id="collapsedMiniEq">
+                    <span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+
+                <!-- EXPANDED NOTCH BODY -->
+                <div class="notch-expanded-view" id="simExpandedNook">
+
+                  <!-- Top Bar inside Notch: Nook, Tray & Controls Tabs on Left + Size & Pin on Right -->
+                  <div class="notch-header-bar">
+                    <div class="notch-left-tabs">
+                      <button type="button" class="notch-tab-btn active" data-tab-target="nook">
+                        <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M12 2L14.4 9.6L22 12L14.4 14.4L12 22L9.6 14.4L2 12L9.6 9.6L12 2Z"/>
+                        </svg>
+                        <span>Nook</span>
+                      </button>
+
+                      <button type="button" class="notch-tab-btn" data-tab-target="tray">
+                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                          <path d="M22 12h-6l-2 3h-4l-2-3H2"/>
+                          <path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/>
+                        </svg>
+                        <span>Tray</span>
+                        <span class="tray-count-pill" id="trayBadgeCount">5</span>
+                      </button>
+                    </div>
+
+                    <div class="notch-center-camera" aria-hidden="true">
+                      <span class="lens-dot"></span>
+                    </div>
+
+                    <div class="notch-right-actions">
+                      <button type="button" class="notch-size-cycle-btn" id="btnCycleNotchSize" title="Cycle Notch Size (Compact / Standard / Large)">
+                        <span id="notchSizeBadgeText">Standard</span>
+                      </button>
+                      <button type="button" class="notch-pin-btn" id="btnPinNook" title="Pin / Unpin OpenNook">
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="12" y1="17" x2="12" y2="22"/><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"/></svg>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- FULL-WIDTH DRAG-AND-DROP OVERLAY ("Drop files here" with Blue Outer Dashed Lining Only) -->
+                  <div class="notch-drop-overlay hidden" id="simDropOverlay">
+                    <div class="drop-zone-full" id="dropZoneTray">
+                      <span class="drop-pill-label">Drop files here</span>
+                    </div>
+                  </div>
+
+                  <!-- TAB 1: ALL 5 NOOK WIDGETS IN ONE PLACE (Zero Sideways Scrolling, Responsive Scaling) -->
+                  <div class="notch-tab-content active" id="panel-nook">
+                    <div class="nook-fitted-row" id="nookFittedRow">
+
+                      <!-- 1. MEDIA PLAYER CARD -->
+                      <div class="nook-widget media-widget">
+                        <div class="mw-top">
+                          <div class="mw-art" id="simAlbumArt">
+                            <span class="mw-art-vinyl"></span>
+                          </div>
+                          <div class="mw-info">
+                            <div class="mw-title" id="simTrackTitle">My Seaside Morning</div>
+                            <div class="mw-artist" id="simTrackArtist">Bonobo</div>
+                          </div>
+                          <div class="mw-eq playing" id="simVisualizer">
+                            <span></span><span></span><span></span><span></span>
+                          </div>
+                        </div>
+
+                        <!-- Inline Scrubber Row: 02:53 [━━━━━━────] 13:20 -->
+                        <div class="mw-scrubber-row">
+                          <span class="mw-time" id="simCurrentTime">02:53</span>
+                          <div class="mw-bar-track" id="simScrubberTrack" title="Click to seek">
+                            <div class="mw-bar-fill" id="simProgressFill" style="width: 24%;"></div>
+                          </div>
+                          <span class="mw-time" id="simTotalTime">13:20</span>
+                        </div>
+
+                        <!-- Transport Row -->
+                        <div class="mw-transport">
+                          <button type="button" class="mw-btn" id="simShuffleBtn" title="Shuffle">
+                            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+                          </button>
+                          <button type="button" class="mw-btn" id="simPrevBtn" title="Previous">
+                            <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><polygon points="19 20 9 12 19 4 19 20"/><line x1="5" y1="19" x2="5" y2="5" stroke="currentColor" stroke-width="2.4"/></svg>
+                          </button>
+                          <button type="button" class="mw-btn mw-play" id="simPlayPauseBtn" title="Play / Pause">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" id="simPlayIcon">
+                              <polygon points="6 4 20 12 6 20 6 4"/>
+                            </svg>
+                          </button>
+                          <button type="button" class="mw-btn" id="simNextBtn" title="Next">
+                            <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 4 15 12 5 20 5 4"/><line x1="19" y1="5" x2="19" y2="19" stroke="currentColor" stroke-width="2.4"/></svg>
+                          </button>
+                          <button type="button" class="mw-btn" id="simRepeatBtn" title="Repeat">
+                            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+                          </button>
+                        </div>
+                      </div>
+
+                      <!-- 2. CIRCULAR CAMERA MIRROR -->
+                      <div class="nook-mirror-holder">
+                        <div class="nook-widget mirror-widget" id="simMirrorPod" role="button" tabindex="0" title="Click to toggle Camera Mirror">
+                          <div class="mirror-idle" id="simMirrorIdle">
+                            <div class="mirror-inner-circle">
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="10" r="6"/>
+                                <circle cx="12" cy="10" r="2"/>
+                                <path d="M7 20h10"/>
+                              </svg>
+                              <span>Mirror</span>
+                            </div>
+                          </div>
+
+                          <div class="mirror-live hidden" id="simMirrorActive">
+                            <svg viewBox="0 0 120 120" class="mirror-avatar-svg">
+                              <rect width="120" height="120" fill="#3b2d54"/>
+                              <circle cx="60" cy="48" r="22" fill="#fca5a5"/>
+                              <circle cx="52" cy="45" r="3" fill="#1f2937"/>
+                              <circle cx="68" cy="45" r="3" fill="#1f2937"/>
+                              <path d="M54 55Q60 60 66 55" stroke="#1f2937" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                              <path d="M26 116C26 88 40 76 60 76C80 76 94 88 94 116" fill="#6366f1"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- 3. CALENDAR SCHEDULE WIDGET -->
+                      <div class="nook-widget calendar-widget">
+                        <div class="cw-top">
+                          <span class="cw-month">Oct</span>
+                          <div class="cw-days" id="simCalStrip">
+                            <button type="button" class="cw-day" data-day="26">
+                              <span class="cw-dow">MO</span>
+                              <span class="cw-num">26</span>
+                              <span class="cw-dot"></span>
+                            </button>
+                            <button type="button" class="cw-day" data-day="27">
+                              <span class="cw-dow">TU</span>
+                              <span class="cw-num">27</span>
+                              <span class="cw-dot"></span>
+                            </button>
+                            <button type="button" class="cw-day" data-day="28">
+                              <span class="cw-dow">WE</span>
+                              <span class="cw-num">28</span>
+                              <span class="cw-dot today-dot"></span>
+                            </button>
+                            <button type="button" class="cw-day" data-day="29">
+                              <span class="cw-dow">TH</span>
+                              <span class="cw-num">29</span>
+                              <span class="cw-dot"></span>
+                            </button>
+                            <button type="button" class="cw-day active" data-day="30">
+                              <span class="cw-dow">FR</span>
+                              <span class="cw-num">30</span>
+                              <span class="cw-dot"></span>
+                            </button>
+                          </div>
+                        </div>
+
+                        <div class="cw-body" id="simCalEvents">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path d="M22 12h-6l-2 3h-4l-2-3H2"/>
+                            <path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/>
+                          </svg>
+                          <span id="simCalStatusText">Nothing for today</span>
+                        </div>
+                      </div>
+
+                      <!-- 4. RICH NOTES WIDGET (Aa, B, I, U, S + Trash) -->
+                      <div class="nook-widget notes-widget">
+                        <textarea class="nw-textarea" id="simNotesInput" spellcheck="false" aria-label="Scratchpad Notes">Notes for me,
+Notes for you.</textarea>
+                        <div class="nw-toolbar">
+                          <div class="nw-format-btns">
+                            <button type="button" class="nw-fmt-btn" data-fmt="size" title="Text Size">Aa</button>
+                            <button type="button" class="nw-fmt-btn" data-fmt="bold" title="Bold"><strong>B</strong></button>
+                            <button type="button" class="nw-fmt-btn" data-fmt="italic" title="Italic"><em>I</em></button>
+                            <button type="button" class="nw-fmt-btn" data-fmt="underline" title="Underline"><u>U</u></button>
+                            <button type="button" class="nw-fmt-btn" data-fmt="strike" title="Strikethrough"><s>S</s></button>
+                          </div>
+                          <button type="button" class="nw-trash-btn" id="btnClearNotes" title="Clear Note">
+                            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                          </button>
+                        </div>
+                      </div>
+
+                      <!-- 5. MULTI-TIMER WIDGET (Blue 03h:00m:00s + Presets) -->
+                      <div class="nook-widget timer-widget">
+                        <div class="tw-dial-view" id="timerDialView">
+                          <div class="tw-header">
+                            <input type="text" class="tw-title-input" value="Add Timer" aria-label="Timer Name" />
+                            <button type="button" class="tw-plus-btn" id="btnToggleTimerList" title="Saved Timers">+</button>
+                          </div>
+
+                          <div class="tw-blue-digits" id="simTimerDigits" title="Click to increment timer">
+                            <span class="tw-unit" data-unit="h" id="twHours">03h</span>
+                            <span class="tw-colon">:</span>
+                            <span class="tw-unit" data-unit="m" id="twMins">00m</span>
+                            <span class="tw-colon">:</span>
+                            <span class="tw-unit" data-unit="s" id="twSecs">00s</span>
+                          </div>
+
+                          <div class="tw-bottom">
+                            <div class="tw-presets">
+                              <button type="button" class="tw-chip" data-mins="15">15m</button>
+                              <button type="button" class="tw-chip active" data-mins="5">5m</button>
+                            </div>
+                            <div class="tw-controls">
+                              <button type="button" class="tw-circle-btn" id="simTimerReset" title="Reset">&#8634;</button>
+                              <button type="button" class="tw-circle-btn tw-play-blue" id="simTimerToggle" title="Start / Pause">&#9654;</button>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="tw-list-view hidden" id="timerListView">
+                          <button type="button" class="tw-back-add" id="btnBackToDial">+ Add Timer</button>
+                          <div class="tw-saved-row" data-mins="15">
+                            <span>&#9201; 15m</span>
+                            <button type="button" class="tw-mini-play">&#9654;</button>
+                          </div>
+                          <div class="tw-saved-row" data-mins="5">
+                            <span>&#9201; 5m</span>
+                            <button type="button" class="tw-mini-play">&#9654;</button>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <!-- TAB 2: TRAY FILE SHELF -->
+                  <div class="notch-tab-content" id="panel-tray">
+                    <div class="tray-shelf-strip" id="simTrayShelf"></div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- DESKTOP LEFT WIDGETS (Weather 65° + October Calendar) -->
+            <div class="desktop-widgets-col">
+              <div class="desktop-weather-card">
+                <div class="dw-city">Chicago</div>
+                <div class="dw-temp">65&deg;</div>
+                <div class="dw-cond">
+                  <span class="dw-sun">&#9728;&#65039;</span>
+                  <span>Sunny</span>
+                  <span>H:69&deg; L:48&deg;</span>
+                </div>
+              </div>
+
+              <div class="desktop-cal-card">
+                <div class="dc-month">OCTOBER</div>
+                <div class="dc-grid">
+                  <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+                  <b></b><b></b><b></b><b></b><span>1</span><span>2</span><span>3</span>
+                  <span>4</span><span>5</span><span class="dc-today">6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+                  <span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span>
+                  <span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- DESKTOP CENTER FINDER WINDOW: "OpenNook Drop Demo" -->
+            <div class="finder-demo-window" id="finderDemoWindow">
+              <div class="finder-titlebar">
+                <div class="finder-traffic">
+                  <span class="dot-red"></span>
+                  <span class="dot-yellow"></span>
+                  <span class="dot-green"></span>
+                </div>
+                <div class="finder-nav-arrows">
+                  <span>&#8249;</span>
+                  <span>&#8250;</span>
+                </div>
+                <div class="finder-title">OpenNook Drop Demo</div>
+                <div class="finder-search">
+                  <span>&#128269; Search</span>
+                </div>
+              </div>
+
+              <div class="finder-body">
+                <div class="finder-hint-banner">
+                  <span>Drag any file below up into the Notch (or click a file to drop it into the Tray):</span>
+                </div>
+                <div class="finder-files-grid" id="finderFilesGrid">
+                  <div class="finder-file-item" draggable="true" data-file-name="Aqua Pulse.png" data-file-color="#0284c7" data-file-type="image">
+                    <div class="ff-thumb" style="background-color: #0369a1;">
+                      <span class="ff-art-circle" style="background-color: #38bdf8;"></span>
+                    </div>
+                    <span class="ff-label">Aqua Pulse.png</span>
+                  </div>
+
+                  <div class="finder-file-item" draggable="true" data-file-name="Emerald Glow.png" data-file-color="#059669" data-file-type="image">
+                    <div class="ff-thumb" style="background-color: #065f46;">
+                      <span class="ff-art-circle" style="background-color: #34d399;"></span>
+                    </div>
+                    <span class="ff-label">Emerald Glow.png</span>
+                  </div>
+
+                  <div class="finder-file-item" draggable="true" data-file-name="Solar Orbit.png" data-file-color="#ea580c" data-file-type="image">
+                    <div class="ff-thumb" style="background-color: #9a3412;">
+                      <span class="ff-art-circle" style="background-color: #fb923c;"></span>
+                    </div>
+                    <span class="ff-label">Solar Orbit.png</span>
+                  </div>
+
+                  <div class="finder-file-item" draggable="true" data-file-name="Violet Vortex.png" data-file-color="#7c3aed" data-file-type="image">
+                    <div class="ff-thumb" style="background-color: #4c1d95;">
+                      <span class="ff-art-circle" style="background-color: #a78bfa;"></span>
+                    </div>
+                    <span class="ff-label">Violet Vortex.png</span>
+                  </div>
+
+                  <div class="finder-file-item" draggable="true" data-file-name="Work 1.1" data-file-color="#0a84ff" data-file-type="folder">
+                    <div class="ff-thumb ff-folder-thumb">
+                      <svg width="42" height="36" viewBox="0 0 48 40" fill="none">
+                        <path d="M4 8C4 5.79086 5.79086 4 8 4H18L22 8H40C42.2091 8 44 9.79086 44 12V32C44 34.2091 42.2091 36 40 36H8C5.79086 36 4 34.2091 4 32V8Z" fill="#38bdf8"/>
+                        <path d="M4 13H44V32C44 34.2091 42.2091 36 40 36H8C5.79086 36 4 34.2091 4 32V13Z" fill="#0284c7"/>
+                      </svg>
+                    </div>
+                    <span class="ff-label">Work 1.1</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section features-section" id="features">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">EVERYTHING IN ONE PLACE</span>
+          <h2 class="section-title">Every detail crafted for macOS.</h2>
+          <p class="section-desc">
+            All your Nook widgets sit side-by-side in one unified view without sideways scrolling—and automatically scale to fit Compact, Standard, or Large notch sizes.
+          </p>
+        </div>
+
+        <!-- Category Filter Bar -->
+        <div class="feature-filter-bar" role="tablist" aria-label="Feature Categories">
+          <button type="button" class="feature-filter-btn active" data-filter="all">All Modules</button>
+          <button type="button" class="feature-filter-btn" data-filter="media">Music &amp; Mirror</button>
+          <button type="button" class="feature-filter-btn" data-filter="productivity">Calendar, Notes &amp; Timer</button>
+          <button type="button" class="feature-filter-btn" data-filter="utilities">Adaptive Sizing &amp; Tray</button>
+        </div>
+
+        <div class="features-grid" id="featuresGrid">
+          <!-- Card 1: Adaptive Notch Sizing -->
+          <article class="feature-card" data-category="utilities">
+            <div class="feature-card-top">
+              <div class="feature-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="4" width="20" height="16" rx="4"/>
+                  <path d="M8 4v3a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V4"/>
+                </svg>
+              </div>
+              <span class="feature-tag">Zero Sideways Scroll</span>
+            </div>
+            <h3>Adaptive Compact, Standard &amp; Large Sizing</h3>
+            <p>
+              Every widget fits together in the same row so you never have to scroll sideways. Choose <strong>Compact</strong> for smaller widgets, <strong>Standard</strong>, or <strong>Large</strong>.
+            </p>
+            <ul class="feature-points">
+              <li>All 5 Nook widgets visible side-by-side at once</li>
+              <li>Proportional typography, icon, and circle scaling</li>
+              <li>Switch sizes in 1 click from the notch header or Settings</li>
+            </ul>
+          </article>
+
+          <!-- Card 2: Live Media & Browser YouTube Music -->
+          <article class="feature-card" data-category="media">
+            <div class="feature-card-top">
+              <div class="feature-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 18V5l12-2v13"/>
+                  <circle cx="6" cy="18" r="3"/>
+                  <circle cx="18" cy="16" r="3"/>
+                </svg>
+              </div>
+              <span class="feature-tag">Now Playing</span>
+            </div>
+            <h3>Apple Music, Spotify &amp; YouTube Music</h3>
+            <p>
+              Control native macOS players and browser tabs playing <strong>YouTube Music</strong> with live timestamps, animated equalizer bars, and an inline seek bar.
+            </p>
+            <ul class="feature-points">
+              <li>Inline progress scrubber: click or drag to jump to any timestamp</li>
+              <li>Shuffle, Previous, Play/Pause, Next &amp; Repeat controls</li>
+              <li>Compact mini artwork &amp; visualizer when the notch is collapsed</li>
+            </ul>
+          </article>
+
+          <!-- Card 3: Circular Camera Mirror -->
+          <article class="feature-card" data-category="media">
+            <div class="feature-card-top">
+              <div class="feature-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                  <circle cx="12" cy="13" r="4"/>
+                </svg>
+              </div>
+              <span class="feature-tag">Instant Check</span>
+            </div>
+            <h3>Circular FaceTime HD Mirror</h3>
+            <p>
+              Click the circular Mirror widget right beside your music player to check your camera framing before a call, and click again to turn it off without closing the Nook.
+            </p>
+            <ul class="feature-points">
+              <li>60fps low-latency `AVCaptureSession` circular preview</li>
+              <li>Automatically scales its diameter to match the notch size</li>
+              <li>Privacy-first: camera powers down the moment you turn it off</li>
+            </ul>
+          </article>
+
+          <!-- Card 4: Calendar Schedule -->
+          <article class="feature-card" data-category="productivity">
+            <div class="feature-card-top">
+              <div class="feature-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+              </div>
+              <span class="feature-tag">EventKit Sync</span>
+            </div>
+            <h3>Calendar &amp; 1-Click Meeting Join</h3>
+            <p>
+              Step through your week with the 5-day date strip (`MO 26` – `FR 30`) and join upcoming Zoom, Google Meet, Teams, or Webex calls in one click.
+            </p>
+            <ul class="feature-points">
+              <li>Syncs natively with macOS Calendar &amp; Google Calendar accounts</li>
+              <li>Highlighted active blue day pill with today indicator dot</li>
+              <li>One-click "Join" button opens your video call immediately</li>
+            </ul>
+          </article>
+
+          <!-- Card 5: Rich Scratchpad Notes -->
+          <article class="feature-card" data-category="productivity">
+            <div class="feature-card-top">
+              <div class="feature-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                </svg>
+              </div>
+              <span class="feature-tag">Quick Notes</span>
+            </div>
+            <h3>Rich Notes with Formatting Bar</h3>
+            <p>
+              Keep notes right in your notch (`"Notes for me, Notes for you."`) with quick formatting controls (`Aa`, `B`, `I`, `U`, `S`) and a 1-click trash button.
+            </p>
+            <ul class="feature-points">
+              <li>Auto-saves every keystroke locally on your Mac</li>
+              <li>Built-in `Aa`, Bold, Italic, Underline &amp; Strikethrough bar</li>
+              <li>Instant clear button when you're ready for a fresh note</li>
+            </ul>
+          </article>
+
+          <!-- Card 6: Multi-Timer & File Tray -->
+          <article class="feature-card" data-category="productivity">
+            <div class="feature-card-top">
+              <div class="feature-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="13" r="8"/>
+                  <path d="M12 9v4l2.5 2.5"/>
+                  <path d="M9 2h6"/>
+                </svg>
+              </div>
+              <span class="feature-tag">Timers &amp; Tray</span>
+            </div>
+            <h3>Blue `03h:00m:00s` Timer &amp; File Tray</h3>
+            <p>
+              Set custom hours, minutes, and seconds on the blue digital timer dial (or launch `15m` / `5m` presets), and drag files into the Notch to stage or AirDrop them.
+            </p>
+            <ul class="feature-points">
+              <li>Interactive `00h : 00m : 00s` dial + saved timers list (`+ Add Timer`)</li>
+              <li>Split blue <strong>Drop files here</strong> and <strong>AirDrop</strong> radar drop zones</li>
+              <li>Stage folders, images, and documents in the horizontal Tray</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="section comparison-section" id="comparison">
+      <div class="container">
+        <div class="comparison-box">
+          <div class="comparison-header">
+            <span class="section-eyebrow">TRANSPARENT COMPARISON</span>
+            <h2 class="section-title">Why pay $15–$25 for a notch app?</h2>
+            <p class="section-desc">
+              OpenNook gives you every Nook widget—Music, Circular Mirror, Calendar, Rich Notes, Timers, and the File Tray with AirDrop—100% free and open source.
+            </p>
+          </div>
+
+          <div class="table-scroll">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Feature / Capability</th>
+                  <th class="highlight-col">OpenNook v1.0</th>
+                  <th>Paid Notch Apps</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Price &amp; License</td>
+                  <td class="highlight-col"><strong>$0 — 100% Free &amp; Open Source</strong></td>
+                  <td>$15 lifetime or $2/month</td>
+                </tr>
+                <tr>
+                  <td>All Widgets Visible at Once (Compact / Standard / Large)</td>
+                  <td class="highlight-col"><span class="check-yes">&#10003; Adaptive Non-Scrolling Layout</span></td>
+                  <td><span class="check-partial">Requires Sideways Scrolling</span></td>
+                </tr>
+                <tr>
+                  <td>Browser YouTube Music + Interactive Seek Bar</td>
+                  <td class="highlight-col"><span class="check-yes">&#10003; Included</span></td>
+                  <td><span class="check-partial">Native Apps Only</span></td>
+                </tr>
+                <tr>
+                  <td>The Tray (Drag-and-Drop File Shelf + AirDrop Radar Zone)</td>
+                  <td class="highlight-col"><span class="check-yes">&#10003; Included</span></td>
+                  <td><span class="check-yes">&#10003; Included</span></td>
+                </tr>
+                <tr>
+                  <td>Menu-Bar-Only Background Mode (Hidden from Cmd+Tab)</td>
+                  <td class="highlight-col"><span class="check-yes">&#10003; Native Accessory Policy</span></td>
+                  <td><span class="check-yes">&#10003; Included</span></td>
+                </tr>
+                <tr>
+                  <td>Telemetry, License Servers, or Subscriptions</td>
+                  <td class="highlight-col"><strong>Zero (100% Local)</strong></td>
+                  <td>License Activation Required</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download & Installation Section -->
+    <section class="section download-section" id="install">
+      <div class="container" id="download">
+        <div class="download-card">
+          <div class="download-card-content">
+            <span class="section-eyebrow">READY IN 10 SECONDS</span>
+            <h2>Get OpenNook for your Mac today.</h2>
+            <p>
+              Download the standard macOS Disk Image (`.dmg`), drag <strong>OpenNook.app</strong> into your <strong>Applications</strong> folder (or double-click <strong>Open OpenNook</strong>), and hover under your camera.
+            </p>
+
+            <div class="download-buttons-row">
+              <a href="downloads/OpenNook.dmg" download="OpenNook-1.0.0.dmg" class="btn btn-primary btn-lg">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="7 10 12 15 17 10"/>
+                  <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                <div class="btn-text-stack">
+                  <span class="btn-main-label">Download OpenNook.dmg</span>
+                  <span class="btn-sub-label">Standard macOS Installer &bull; Universal Binary</span>
+                </div>
+              </a>
+
+              <a href="downloads/OpenNook.zip" download="OpenNook.zip" class="btn btn-secondary btn-lg">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="7 10 12 15 17 10"/>
+                  <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                <div class="btn-text-stack">
+                  <span class="btn-main-label">Download OpenNook.zip</span>
+                  <span class="btn-sub-label">Direct `.app` Archive &bull; No Mount Needed</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- 3-Step Installation Guide -->
+          <div class="install-steps">
+            <div class="install-step">
+              <div class="step-header">
+                <span class="step-num">01</span>
+                <h4>Mount the DMG</h4>
+              </div>
+              <p>Open <code>OpenNook-1.0.0.dmg</code> from your Downloads folder to mount the installer volume.</p>
+            </div>
+
+            <div class="install-step">
+              <div class="step-header">
+                <span class="step-num">02</span>
+                <h4>Drag to Applications</h4>
+              </div>
+              <p>Drag <strong>OpenNook.app</strong> into your <strong>Applications</strong> folder, or double-click <strong>Open OpenNook</strong>.</p>
+            </div>
+
+            <div class="install-step">
+              <div class="step-header">
+                <span class="step-num">03</span>
+                <h4>Hover Under the Camera</h4>
+              </div>
+              <p>Move your pointer directly beneath the MacBook camera to expand your Nook anytime.</p>
+            </div>
+          </div>
+
+          <div class="gatekeeper-tip">
+            <div class="tip-title">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              <span>First-Launch Tip:</span>
+            </div>
+            <p>
+              Double-click <strong>Open OpenNook</strong> inside the DMG window to automatically install to <code>/Applications</code>, clear macOS quarantine attributes, and launch cleanly in the background.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq-section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">QUESTIONS &amp; ANSWERS</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary>Do all widgets fit in the notch without sideways scrolling?</summary>
+            <p>
+              Yes. OpenNook automatically scales every widget to fit side-by-side inside the notch at once. You can switch between <strong>Compact</strong>, <strong>Standard</strong>, and <strong>Large</strong> sizes in Settings (or directly from the top-right size button in the notch) and the widgets dynamically resize to match.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Does my Mac need a notch?</summary>
+            <p>
+              No. On screens without a physical camera notch, a slim handle at the top center of the screen opens the exact same Nook and Tray.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Does it hide from the Dock and Cmd+Tab App Switcher?</summary>
+            <p>
+              Yes. OpenNook runs as a native background accessory app with a menu bar icon only—never showing an app icon in your Dock or when switching apps with <code>Cmd+Tab</code>.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Does OpenNook collect any personal data or require a paid license?</summary>
+            <p>
+              Never. OpenNook is 100% free, open source, and runs locally on your Mac with zero telemetry or cloud accounts.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <div class="brand-logo">
+          <span class="brand-mark">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+              <path d="M4 5C4 3.89543 4.89543 3 6 3H18C19.1046 3 20 3.89543 20 5V8C20 11.3137 17.3137 14 14 14H10C6.68629 14 4 11.3137 4 8V5Z" fill="currentColor"/>
+              <circle cx="12" cy="18.5" r="2.2" fill="#ffffff"/>
+            </svg>
+          </span>
+          <span class="brand-name">OpenNook</span>
+        </div>
+        <p>Built natively with Swift &amp; AppKit for macOS. 100% Free &amp; Open Source.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="downloads/OpenNook.dmg" download="OpenNook-1.0.0.dmg">Download DMG</a>
+        <a href="downloads/OpenNook.zip" download="OpenNook.zip">Download ZIP</a>
+        <a href="#simulator">Interactive Simulator</a>
+        <a href="#features">Features</a>
+        <a href="#faq">FAQ</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
